@@ -350,7 +350,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_891"><a  href="class-pltdaylightsavingsstatusevaluation.html">plt:DaylightSavingsStatusEvaluation</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_892"><a  href="class-pltdaylightsavingsstatusproperty.html">plt:DaylightSavingsStatusProperty</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_892"><a class="active" href="class-pltdaylightsavingsstatusproperty.html">plt:DaylightSavingsStatusProperty</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_893"><a  href="class-pltindoorzone.html">plt:IndoorZone</a></li>
           
@@ -402,7 +402,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_913"><a  href="class-seasresidentalbuilding.html">seas:ResidentalBuilding</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_914"><a class="active" href="class-seassystem.html">seas:System</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_914"><a  href="class-seassystem.html">seas:System</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_915"><a  href="class-seaswall.html">seas:Wall</a></li>
           
@@ -557,7 +557,7 @@
           <a href="entities-tree-classes.html">Classes</a>
     </li>
       <li class="active">
-            https://w3id.org/seas/System
+            https://w3id.org/platoon/DaylightSavingsStatusProperty
         </li>
   </ol>
 
@@ -585,7 +585,7 @@
 
             <h1>
 
-                seas:System
+                plt:DaylightSavingsStatusProperty
                 
                     <small class="label label-info label-xs">leaf node</small>
                   
@@ -600,17 +600,23 @@
                 <ul>
                     
 
-                        <li><a href="entities-tree-classes.html">owl:Thing</a>
+                        
+
+                        <li>
+
+                          <a href="class-seasproperty.html" title="'Property'">seas:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'System'">seas:System</a>
 
+                            <li><a style="font-weight: bold;" title="'day light Savings Status Property' - The class of properties that are quantifiable and have a day light Savings Status.">plt:DaylightSavingsStatusProperty</a>
                             
                               </li>
 
                           </ul>
 
-                        </li>
+                          </li>
+                        
+
                     
 
                 </ul>
@@ -627,7 +633,7 @@
             </div>
             <div class="panel-body">
 
-                <code>https://w3id.org/seas/System</code>
+                <code>https://w3id.org/platoon/DaylightSavingsStatusProperty</code>
             </div>
           </div>
            </div></div>
@@ -640,7 +646,7 @@
             </div>
             <div class="panel-body">
 
-                System
+                day light Savings Status Property
             </div>
           </div>
            </div></div>
@@ -649,10 +655,37 @@
 
 
            
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Description</h3>
+            </div>
+            <div class="panel-body">
+
+                The class of properties that are quantifiable and have a day light Savings Status.
+            </div>
+          </div>
+           </div></div>
+           
 
 
 
 
+           
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Superclasses (1)</h3>
+            </div>
+            <div class="panel-body">
+
+            
+                    <li><a href="class-seasproperty.html" title="https://w3id.org/seas/Property">seas:Property</a></li>
+            
+
+            </div>
+          </div>
+           </div></div>
            
 
 
@@ -669,7 +702,7 @@
             </div>
             <div class="panel-body" style="overflow: auto;">
 
-                <p>Instances of seas:System can have the following properties:</p>
+                <p>Instances of plt:DaylightSavingsStatusProperty can have the following properties:</p>
             </div>
              <table class="table table-bordered" style="overflow: auto;">
 
@@ -1087,9 +1120,17 @@
                 
 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">plt:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/platoon/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">seas:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/seas/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">vs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 
-<span class="nn">seas:</span><span class="nt">System</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="nn">plt:</span><span class="nt">DaylightSavingsStatusProperty</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">label</span><span class="w"> </span><span class="s">&quot;day light Savings Status Property&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">comment</span><span class="w"> </span><span class="s">&quot;The class of properties that are quantifiable and have a day light Savings Status.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">isDefinedBy</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">BuildingOntology</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">subClassOf</span><span class="w"> </span><span class="nn">seas:</span><span class="nt">Property</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">vs:</span><span class="nt">term_status</span><span class="w"> </span><span class="s">&quot;testing&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
 
@@ -1190,7 +1231,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_914").offset().top - 100
+          scrollTop: $("#sd_892").offset().top - 100
       }, 100);
     });
 

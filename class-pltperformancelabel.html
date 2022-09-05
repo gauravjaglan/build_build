@@ -346,7 +346,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_348"><a  href="class-pltclimatezone.html">plt:ClimateZone</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_349"><a class="active" href="class-pltdatacenter.html">plt:DataCenter</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_349"><a  href="class-pltdatacenter.html">plt:DataCenter</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_350"><a  href="class-pltdaylightsavingsstatusevaluation.html">plt:DaylightSavingsStatusEvaluation</a></li>
           
@@ -362,7 +362,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_356"><a  href="class-pltoutdoorzone.html">plt:OutdoorZone</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_357"><a  href="class-pltperformancelabel.html">plt:PerformanceLabel</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_357"><a class="active" href="class-pltperformancelabel.html">plt:PerformanceLabel</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_358"><a  href="class-pltresidentialbuilding.html">plt:ResidentialBuilding</a></li>
           
@@ -565,7 +565,7 @@
           <a href="entities-tree-classes.html">Classes</a>
     </li>
       <li class="active">
-            https://w3id.org/platoon/DataCenter
+            https://w3id.org/platoon/PerformanceLabel
         </li>
   </ol>
 
@@ -593,10 +593,8 @@
 
             <h1>
 
-                plt:DataCenter
+                plt:PerformanceLabel
                 
-                    <small class="label label-info label-xs">leaf node</small>
-                  
 
             </h1>
             <hr>
@@ -608,23 +606,21 @@
                 <ul>
                     
 
-                        
-
-                        <li>
-
-                          <a href="class-pltnonresidentialbuilding.html" title="'Non Residential Building' - A non-residential building means a building or part of a building that is not a place of residence.">plt:NonResidentialBuilding</a>
+                        <li><a href="entities-tree-classes.html">owl:Thing</a>
 
                           <ul>
+                            <li><a style="font-weight: bold;" title="'Performance Label' - ">plt:PerformanceLabel</a>
 
-                            <li><a style="font-weight: bold;" title="'Data Center' - A data center is a building, dedicated space within a building used to house computer systems and associated components, such …">plt:DataCenter</a>
+                            
+                                <ul>
+                                  <li><a href="class-pltclimateperformancelabel.html" title="'climate label' - ">plt:ClimatePerformanceLabel</a></li><li><a href="class-pltenergyperformancelabel.html" title="'energy label' - ">plt:EnergyPerformanceLabel</a></li>
+                                </ul>
                             
                               </li>
 
                           </ul>
 
-                          </li>
-                        
-
+                        </li>
                     
 
                 </ul>
@@ -641,7 +637,7 @@
             </div>
             <div class="panel-body">
 
-                <code>https://w3id.org/platoon/DataCenter</code>
+                <code>https://w3id.org/platoon/PerformanceLabel</code>
             </div>
           </div>
            </div></div>
@@ -654,7 +650,7 @@
             </div>
             <div class="panel-body">
 
-                Data Center
+                Performance Label
             </div>
           </div>
            </div></div>
@@ -670,7 +666,7 @@
             </div>
             <div class="panel-body">
 
-                A data center is a building, dedicated space within a building used to house computer systems and associated components, such as telecommunications and storage systems. (source: Wikipedia)
+                 
             </div>
           </div>
            </div></div>
@@ -679,21 +675,6 @@
 
 
 
-           
-            <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Superclasses (2)</h3>
-            </div>
-            <div class="panel-body">
-
-            
-                    <li><a href="class-pltnonresidentialbuilding.html" title="https://w3id.org/platoon/NonResidentialBuilding">plt:NonResidentialBuilding</a></li><li><a href="class-seasbuilding.html" title="https://w3id.org/seas/Building">seas:Building</a></li>
-            
-
-            </div>
-          </div>
-           </div></div>
            
 
 
@@ -710,7 +691,7 @@
             </div>
             <div class="panel-body" style="overflow: auto;">
 
-                <p>Instances of plt:DataCenter can have the following properties:</p>
+                <p>Instances of plt:PerformanceLabel can have the following properties:</p>
             </div>
              <table class="table table-bordered" style="overflow: auto;">
 
@@ -1132,11 +1113,10 @@
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">vs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 
-<span class="nn">plt:</span><span class="nt">DataCenter</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">label</span><span class="w"> </span><span class="s">&quot;Data Center&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">comment</span><span class="w"> </span><span class="s">&quot;A data center is a building, dedicated space within a building used to house computer systems and associated components, such as telecommunications and storage systems. (source: Wikipedia)&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="nn">plt:</span><span class="nt">PerformanceLabel</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">label</span><span class="w"> </span><span class="s">&quot;Performance Label&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">comment</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="nn">rdfs:</span><span class="nt">isDefinedBy</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">BuildingOntology</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">subClassOf</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">NonResidentialBuilding</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="nn">vs:</span><span class="nt">term_status</span><span class="w"> </span><span class="s">&quot;testing&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
@@ -1238,7 +1218,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_349").offset().top - 100
+          scrollTop: $("#sd_357").offset().top - 100
       }, 100);
     });
 

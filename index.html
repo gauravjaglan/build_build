@@ -247,7 +247,7 @@
         
         
         <li  ><a href="indexc.html">Graph Visualization</a></li>
-        <li  ><a href="index.html">Query Ontology</a></li>
+        <li  ><a href="query.html">Query Ontology</a></li>
         <li ><div class="dropdown">
           <button class="dropbtn">Download Ontology</button>
           <div class="dropdown-content">
@@ -293,7 +293,16 @@
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
 
-
+<head>
+  <link href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/@triply/yasgui/build/yasgui.min.js"></script>
+</head>
+<body>
+  <div id="yasgui"></div>
+  <script>
+    const yasgui = new Yasgui(document.getElementById("yasgui"));
+  </script>
+</body>
         <li>
           <input style="margin-top: 30px;  margin-bottom: 20px;" type="text" id="search-input-sidebar" name="" value="" placeholder="Type to search">
         </li>

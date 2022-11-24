@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+  </owl:Class>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+  </owl:AnnotationProperty>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+  </owl:DatatypeProperty>
+
+  <rdf:Description rdf:about="https://w3id.org/platoon/BuildingOntology">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title xml:lang="en">Platoon Building Ontology</dc:title>
+    <dc:description xml:lang="en">The  Building vocabulary for the  Platoon  project.</dc:description>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-21</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-06-13</dc:modified>
+    <dc:creator>Sarra BEN ABBES and Lynda TEMAL and Oumy SEYE</dc:creator>
+    <dc:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <ns0:preferredNamespacePrefix>plt</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:resource="https://w3id.org/platoon/"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/platoon/BuildingOntology-1.3"/>
+    <owl:imports rdf:resource="https://w3id.org/platoon/AlignmentOntology"/>
+    <owl:imports rdf:resource="https://w3id.org/seas/BuildingOntology-1.0"/>
+    <owl:versionInfo>v1.3</owl:versionInfo>
+  </rdf:Description>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/platoon/hasConstructionDate">
+    <rdfs:label xml:lang="en">has construction cate</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a construction to its construction date</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/seas/Construction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/ResidentialBuilding">
+    <rdfs:label xml:lang="en">Residential Building</rdfs:label>
+    <rdfs:comment xml:lang="en">A residential building is a building containing separate residences where a person may live or regularly stay.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Building"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/NonResidentialBuilding">
+    <rdfs:label xml:lang="en">Non Residential Building</rdfs:label>
+    <rdfs:comment xml:lang="en">A  non-residential building means a building or part of a building that is not a place of residence.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Building"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/BuildingGroup">
+    <rdfs:label xml:lang="en">Building Group</rdfs:label>
+    <rdfs:comment xml:lang="en">A Building group is a group which has member only Buildings.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/seas/member"/>
+        <owl:allValuesFrom rdf:resource="https://w3id.org/seas/Building"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/DataCenter">
+    <rdfs:label xml:lang="en">Data Center</rdfs:label>
+    <rdfs:comment xml:lang="en">A data center is a building, dedicated space within a building used to house computer systems and associated components, such as telecommunications and storage systems. (source: Wikipedia)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/NonResidentialBuilding"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/LogisticCenter">
+    <rdfs:label xml:lang="en">Logistic Center</rdfs:label>
+    <rdfs:comment xml:lang="en">A logistic center is a building that is administrated by one company and allows other companies to lease warehouse space to carry out warehousing and logistics services.(source: Wikipedia)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/NonResidentialBuilding"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/Retail">
+    <rdfs:label xml:lang="en">Retail</rdfs:label>
+    <rdfs:comment xml:lang="en">A retail is a building dedicated to the sale of goods to the public in relatively small quantities for use or consumption rather than for resale.(source: Wikipedia)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/NonResidentialBuilding"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/Canteen">
+    <rdfs:label xml:lang="en">Canteen</rdfs:label>
+    <rdfs:comment xml:lang="en">A Canteen is a small cafeteria or snack bar, especially one in a military establishment, school, or place of work. (source: Wikipedia)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/BuildingSpace"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/TranformerCenter">
+    <rdfs:label xml:lang="en">Transformer Center</rdfs:label>
+    <rdfs:comment xml:lang="en">Building dedicated to transformer</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/NonResidentialBuilding"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/ClimateZone">
+    <rdfs:label xml:lang="en">Climate Zone</rdfs:label>
+    <rdfs:comment xml:lang="en">A climate zones are areas with distinct climates, which occur in east-west direction around the Earth, and can be classified using different climatic parametres. Generally, climate zones are belt-shaped and circular around the Poles (see picture on the right). In some areas, climate zones can be interrupted by mountains or oceans.(source: meteoblue)
+                  Climate zone can cantain in place or/and contain Place. For Example:
+                  &lt;climateZone1&gt; sch:containedInPlace &lt;France&gt;  ,
+                  &lt;climateZone1&gt; sch:containsPlace &lt;Paris&gt; </rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://schema.org/Place">
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/City">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/OutdoorZone">
+    <rdfs:label xml:lang="en">Outdoor Zone</rdfs:label>
+    <rdfs:comment xml:lang="en">Open Air Zone</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Zone"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/IndoorZone">
+    <rdfs:label xml:lang="en">Indoor Zone</rdfs:label>
+    <rdfs:comment xml:lang="en">An indoor zone is an under cover Zone</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Zone"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/DaylightSavingsStatusProperty">
+    <rdfs:label xml:lang="en">Daylight Savings Status Property</rdfs:label>
+    <rdfs:comment xml:lang="en">The day light savings status property is class of properties that are quantifiable and have a day light Savings Status.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Property"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/DaylightSavingsStatusEvaluation">
+    <rdfs:label xml:lang="en">Day Light Savings Status Evaluation</rdfs:label>
+    <rdfs:comment xml:lang="en">The  day light savings status evaluation is theclass of evaluation for day light savings status.It indicates if the building is under daylight savings period (0 to 1). 0 indicates that the building has not changed its electricity consumption profiles due to daylight savings, while 1 indicates the period in which the building may have been affected.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/seas/Evaluation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/seas/evaluationOf"/>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/platoon/DaylightSavingsStatusProperty"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/seas/evaluatedSimpleValue"/>
+        <owl:allValuesFrom>
+          <rdfs:Datatype>
+            <owl:oneOf>
+              <rdf:List>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                <rdf:rest>
+                  <rdf:List>
+                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:List>
+                </rdf:rest>
+
+              </rdf:List>
+            </owl:oneOf>
+
+          </rdfs:Datatype>
+        </owl:allValuesFrom>
+
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/platoon/hasDayLightSavingsStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">has day light Savings Status</rdfs:label>
+    <rdfs:comment xml:lang="en">Links the building to its day light Savings Status</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/seas/hasProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Building"/>
+    <rdfs:range rdf:resource="https://w3id.org/platoon/DaylightSavingsStatusProperty"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/PerformanceLabel">
+    <rdfs:label>Performance Label</rdfs:label>
+    <rdfs:comment> </rdfs:comment>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/ClimatePerformanceLabel">
+    <rdfs:label>climate label</rdfs:label>
+    <rdfs:comment> </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/platoon/EnergyPerformanceLabel">
+    <rdfs:label>energy label</rdfs:label>
+    <rdfs:comment> </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/platoon/energeticPerformanceClass">
+    <rdfs:label xml:lang="en">energetic performance class</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a building space to its the energy performance label.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/seas/FeatureOfInterest"/>
+    <rdfs:range rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:ObjectProperty>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassA">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class A</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassB">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en"> class B</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassC">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class C</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassD">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class D</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassE">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class E</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassF">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class F</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassG">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class G</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://w3id.org/platoon/ClassN">
+    <rdf:type rdf:resource="https://w3id.org/platoon/PerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/ClimatePerformanceLabel"/>
+    <rdf:type rdf:resource="https://w3id.org/platoon/EnergyPerformanceLabel"/>
+    <rdfs:label xml:lang="en">class N</rdfs:label>
+    <ns1:term_status>testing</ns1:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/platoon/BuildingOntology"/>
+  </owl:NamedIndividual>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Building">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/def/saref4bldg#Building">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/System">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Lobby">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/bot#Zone">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Zone">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Corridor">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/ResidentalBuilding">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/NonResidentalBuilding">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/EducationalBuilding">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/OfficeBuilding">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.tno.nl/cerise/cim-profile#Location">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Country">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ontology.tno.nl/cerise/cim-profile#Area">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/AreaProperty">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Wall">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/Buildingspace">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/bot#Floor">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/seas/BuildingStorey">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/containedInPlace">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/containsPlace">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#contains">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/seas/isMemberOf">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#isContainedIn">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/seas/subSystemOf">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/bot#containsZone">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasStorey">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+  </owl:ObjectProperty>
+
+</rdf:RDF>
